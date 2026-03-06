@@ -1,0 +1,24 @@
+1. Na consola inserimos o comando : npx prisma init --db. //SErve para aceder a bancos de dados
+2. Na consola inserimos o comando : npx create-db // Serve para criar o banco de dados
+3. Na consola inserimos o comando : mkdir hello-prisma && cd hello-prisma //SErver para criar uma pasta e entrar nela
+4. Na consola inserimos o comando : npm init -y && npm install typescript tsx @types/node --save-dev && npx tsc --init //Serve para criar um projeto node e instalar as dependências necessárias para o typescript
+5. Na consola inserimos o comando : sudo npm install prisma @types/pg --save-dev && sudo npm install @prisma/client @prisma/adapter-pg pg dotenv //Serve para instalar as dependências necessárias para o prisma e o postgres
+6.No ficheiro tsconfig.json inserimos o seguinte código :
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "target": "ES2023",
+    "strict": true,
+    "esModuleInterop": true,
+    "ignoreDeprecations": "6.0"
+  }
+}
+//Serve para configurar o typescript
+7. No ficheiro package.json alteramos o type para module, ficando da seguinte forma :
+{
+  "type": "module"
+}
+//Serve para configurar o node para usar módulos ES
+8. Na consola inserimos o comando : npx prisma //Serve para aceder ao prisma
+9. Na consola inserimos o comando : npx prisma init --db --output ../generated/prisma //Serve para inicializar o prisma e gerar os arquivos necessários para a conexão com o banco de dados
