@@ -7,12 +7,12 @@ generator client {
 // Datasource obrigatória, mas URL não é usada no Prisma 7
 datasource db {
   provider = "postgresql"
-  url = env("DATABASE_URL")
+  url      = env("DATABASE_URL")
 }
 
 model Task { 
   id    Int     @id @default(autoincrement()) 
   title String 
-  status  Boolean @default(false)
+  completed  Boolean @default(false)
   priority String
 }
